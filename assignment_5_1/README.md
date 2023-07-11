@@ -1,6 +1,6 @@
 # Will a Customer Accept the Coupon?
 
-### Context
+# Problem Statement 
 
 Imagine driving through town and a coupon is delivered to your cell phone for a restaraunt near where you are driving. Would you accept that coupon and take a short detour to the restaraunt? Would you accept the coupon but use it on a sunbsequent trip? Would you ignore the coupon entirely? What if the coupon was for a bar instead of a restaraunt? What about a coffee house? Would you accept a bar coupon with a minor passenger in the car? What about if it was just you and your partner in the car? Would weather impact the rate of acceptance? What about the time of day?
 
@@ -14,39 +14,24 @@ The goal of this project is to use what you know about visualizations and probab
 
 This data comes to us from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk. The survey describes different driving scenarios including the destination, current time, weather, passenger, etc., and then ask the person whether he will accept the coupon if he is the driver. Answers that the user will drive there ‘right away’ or ‘later before the coupon expires’ are labeled as ‘Y = 1’ and answers ‘no, I do not want the coupon’ are labeled as ‘Y = 0’. There are five different types of coupons -- less expensive restaurants (under $20), coffee houses, carry out & take away, bar, and more expensive restaurants ($20 - $50).
 
-### Deliverables
+# Observations and Conclusions
 
-Your final product should be a brief report that highlights the differences between customers who did and did not accept the coupons. To explore the data you will utilize your knowledge of plotting, statistical summaries, and visualization using Python. You will publish your findings in a public facing github repository as your first portfolio piece.
+## Observations
+- The overall Acceptance rate for any coupon is = 43.16% 
+- The overall Acceptance rate for a Bar coupon is = 41.00% Acceptance rate across
+- Acceptance rate for those who go to a bar 3 or more times = 19%
+- Acceptance rate for those who go to bar more than once a month and are over the age of 25 = 14.58%
+- Acceptance rate for those who go to bar more than once a month and had passengers that were not a kid and had occupations other than farming, fishing, or forestry = 71.79%
+- Acceptance rate for those who are young and single starting their career(lower income) - 59%
 
-# Data Description
-Keep in mind that these values mentioned below are average values.
+## Conclusions
+- Overall the bar coupons acceptance rates is on par with other types of coupons
+- The worst category to target would be individuals who frequent bar more often.
+- Having a kid in the car is a deterrent to accepting the Coupon. Which is great, shows the drivers are responsible
 
-The attributes of this data set include:
+## Futher invetigation Required
+- Does the length of the day determine if the bar coupon is accepted. Example, it gets darker earlier in the day in winters, will this influence people to accept the coupon
+- Expiration duration - if the coupon has a longer expiration duration is the acceptance rate higher. Example, if the coupon had a 24hour expiration and if I am driving with a child in the car, I would still accept it but go to the bar later after dropping off my kid
 
-#### User attributes
-
-- Gender: male, female
-- Age: below 21, 21 to 25, 26 to 30, etc.
-- Marital Status: single, married partner, unmarried partner, or widowed
-- Number of children: 0, 1, or more than 1
-- Education: high school, bachelors degree, associates degree, or graduate degree
-- Occupation: architecture & engineering, business & financial, etc.
-- Annual income: less than $12500, $12500 - $24999, $25000 - $37499, etc.
-- Number of times that he/she goes to a bar: 0, less than 1, 1 to 3, 4 to 8 or greater than 8
-- Number of times that he/she buys takeaway food: 0, less than 1, 1 to 3, 4 to 8 or greater than 8
-- Number of times that he/she goes to a coffee house: 0, less than 1, 1 to 3, 4 to 8 or greater than 8
-- Number of times that he/she eats at a restaurant with average expense less than $20 per person: 0, less than 1, 1 to 3, 4 to 8 or greater than 8
-- Number of times that he/she goes to a bar: 0, less than 1, 1 to 3, 4 to 8 or greater than 8
-
-#### Contextual attributes
-
-- Driving destination: home, work, or no urgent destination
-- Location of user, coupon and destination: we provide a map to show the - - geographical location of the user, destination, and the venue, and we mark the distance between each two places with time of driving. The user can see whether the venue is in the same direction as the destination.
-- Weather: sunny, rainy, or snowy
-- Temperature: 30F, 55F, or 80F
-- Time: 10AM, 2PM, or 6PM
-- Passenger: alone, partner, kid(s), or friend(s)
-
-#### Coupon attributes
-
-- time before it expires: 2 hours or one day
+## Not enough Data
+- Value and type of the bar coupon. Example a "buy 1 get and 1 drink free" might perform better then "10% off a drink"
