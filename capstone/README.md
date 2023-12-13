@@ -88,10 +88,10 @@ TBD
 Build a model that could predict the validity of a tweet as a true indicator of an ongoing disaster. 
 
 # References 
-https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e 
-https://medium.com/analytics-vidhya/introduction-to-nlp-with-disaster-tweets-3b672a75748c
-https://www.kaggle.com/code/alexia/kerasnlp-starter-notebook-disaster-tweets/notebook
-https://www.kaggle.com/code/jessicaval/disaster-tweets-prediction-logreg-embeddings
-https://huggingface.co/
-https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270
-https://www.nltk.org/
+- https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e 
+- https://medium.com/analytics-vidhya/introduction-to-nlp-with-disaster-tweets-3b672a75748c
+- https://www.kaggle.com/code/alexia/kerasnlp-starter-notebook-disaster-tweets/notebook
+- https://www.kaggle.com/code/jessicaval/disaster-tweets-prediction-logreg-embeddings
+- https://huggingface.co/
+- https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270
+- https://www.nltk.org/
