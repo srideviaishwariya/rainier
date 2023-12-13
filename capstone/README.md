@@ -72,7 +72,7 @@ Example
 - control wild fires california northern part state troubling
     - Setiment - [{'label': 'NEGATIVE', 'score': 0.9941936135292053}]
 
-Given its a disaster tweet dataset most of the tweets were with the negative sentiment 
+Given its a disaster tweet dataset most of the tweets were with the negative sentiment. A KNN classification to determine if the sentiment and the score are a good indicator of the prediction for disaster yields an accuracy score of 56% which makes sentiment a poor indicator of an incident in this dataset. 
 
 ## 4. Create an Embed for the Text 
 Machine Learning models take numerical values as input. Converting the string to a numerical vector is the first step in training a Model. For this purpose I explored the following tools,
