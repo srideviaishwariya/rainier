@@ -52,12 +52,27 @@ Given we have the Twitter text, filling the missing keyword is essentially extra
 - YAKE - A light-weight unsupervised automatic keyword extraction method 
 - BERT keyword extractor from hugging face https://huggingface.co/yanekyuk/bert-keyword-extractor.
 
-I compared both YAKE and BERT and dcided to go with BERT through they both were giving very similiar Keyword results. 
+Examples
+- people died heat wave far
+    - Keyword from BERT - [{'entity': 'B-KEY', 'score': 0.9998497, 'index': 3, 'word': 'heat', 'start': 12, 'end': 16}, {'entity': 'I-KEY', 'score': 0.9999114, 'index': 4, 'word': 'wave', 'start': 17, 'end': 21}]
+    - Keyword from YAKE - [('people', 0.15831692877998726)]
+- haha south tampa flooded hah wait second live south tampa am gon na am gon na fuck
+    - Keyword from BERT - []
+    - Keyword from YAKE - [('gon', 0.07571113878390312)]
 
-An observation from the keyword generation, some of the keywords generated were not relevant and would require more fine-tuning or manual intervention to get the results that is required 
+The keyword generation needs to be modified to detect the disaster words as keywords. Currently both the models are not giving relevant keyword in both the cases and could be detrimental to analysis
 
 ## 3. Understand the sentiment behind the tweets 
-TBD
+
+Used the Huggingface sentiment analyser.
+
+Example 
+- giant cranes holding bridge collapse nearby homes
+    - Sentiment - [{'label': 'NEGATIVE', 'score': 0.9995463490486145}]
+- control wild fires california northern part state troubling
+    - Setiment - [{'label': 'NEGATIVE', 'score': 0.9941936135292053}]
+
+Given its a disaster tweet dataset most of the tweets were with the negative sentiment 
 
 ## 4. Create an Embed for the Text 
 Machine Learning models take numerical values as input. Converting the string to a numerical vector is the first step in training a Model. For this purpose I explored the following tools,
