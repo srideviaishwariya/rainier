@@ -72,13 +72,20 @@ Example
 - control wild fires california northern part state troubling
     - Setiment - [{'label': 'NEGATIVE', 'score': 0.9941936135292053}]
 
-Given its a disaster tweet dataset most of the tweets were with the negative sentiment. A KNN classification to determine if the sentiment and the score are a good indicator of the prediction for disaster yields an accuracy score of 56% which makes sentiment a poor indicator of an incident in this dataset. 
+A KNN classification to determine if the sentiment and the score are a good indicator of the prediction for disaster yields an accuracy score of 56% which makes sentiment a poor indicator of an incident in this dataset. 
 
 ## 4. Create an Embed for the Text 
 Machine Learning models take numerical values as input. Converting the string to a numerical vector is the first step in training a Model. For this purpose I explored the following tools,
-- BERT Embeddings 
-- Huggingface embed with various models 
-- One-hot encoding (Bag of Words)
+- Using CountVectorizer to create a bag of words representation of text (vector dimensions = 900).
+    - Test set Accuracy Score:  0.7751605995717344
+    - Training set Accuracy Score:  0.8421710408855562
+    - Recall Score:  0.7353187919463087
+    - Average Precision Score:  0.7552376374376963
+- Using TF-IDF (term frequency-inverse document frequency) (vector dimensions = 900).
+    - Test set Accuracy Score:  0.7794432548179872
+    - Training set Accuracy Score:  0.8289591144438493
+    - Recall Score:  0.7135067114093959
+    - Average Precision Score:  0.7361504637616629
 
 ## 5. Visualise the Embeddings 
 In order to see whether our embeddings are capturing information that is relevant to our problem (i.e. whether the tweets are about disasters or not), it is a good idea to visualize them and see if the classes look well separated. Since vocabularies are usually very large and visualizing data in 20,000 dimensions is impossible, techniques like PCA will help project the data down to two dimensions. This is plotted below.
