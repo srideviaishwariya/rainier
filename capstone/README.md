@@ -102,19 +102,33 @@ I am using the following tools for classification
 - KNN 
 - Logistic regression 
 
+
 ## 7. Validation of the Results 
 It is important to understand the accuracy of the model this is done using a Confusion Matrix. The goal here is to build a model with the following attributes, 
-
 - Build predictive model with 75% accuracy
 - Build predictive model with 75% recall
 - Build predictive model with 75% precision
 
-# 8. Further Exploration of Models 
-- BERT
+The Bag of Words and TF-IDF yeilded results which was more the then scores we had planned for the Model. 
+
+# Addtional Exploration 
+## 1. Retrieval Augmented Generation (RAG) Architecture 
+
+There are two code snippets for RAG model implementation using Huggingface and Langchain. I couldn't get the results in Langchain due to 429 errors from OpenAPI. 
+(additional inforomation explainging the architecture and usage is in the Jupyter notebook)
+
+## 2. Retrieval-Augmented Generation vs. Semantic Search
+
+The Example uses FAISS(Facebook AI Similarity Search) to build the semantic search
+(additional inforomation explainging the architecture and usage is in the Jupyter notebook)
+
+## 3. BERT Embedding 
+The Example uses pytorch with BERT
+(additional inforomation explainging the architecture and usage is in the Jupyter notebook)
 
 # Expected Results
 
-Build a model that could predict the validity of a tweet as a true indicator of an ongoing disaster. 
+Use the Capstone project to explore the world of NLP!! :D   
 
 # References 
 - https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e 
@@ -127,4 +141,7 @@ Build a model that could predict the validity of a tweet as a true indicator of 
 - https://patil-aakanksha.medium.com/top-5-pre-trained-word-embeddings-20de114bc26
 - https://www.kaggle.com/code/pierremegret/gensim-word2vec-tutorial 
 - https://www.analyticsvidhya.com/blog/2022/01/embedding-techniques-on-text-data-using-knn/
-
+- https://arxiv.org/abs/2005.11401
+- https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html 
+- https://www.singlestore.com/blog/a-guide-to-retrieval-augmented-generation-rag/
+- https://huggingface.co/docs/transformers/model_doc/rag
