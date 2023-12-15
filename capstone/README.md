@@ -74,7 +74,7 @@ Example
 
 A KNN classification to determine if the sentiment and the score are a good indicator of the prediction for disaster yields an accuracy score of 56% which makes sentiment a poor indicator of an incident in this dataset. 
 
-## 4. Create an Embed for the Text 
+## 4. Create an Embed for the Text and use Classification algorithm
 Machine Learning models take numerical values as input. Converting the string to a numerical vector is the first step in training a Model. For this purpose I explored the following tools,
 - Using CountVectorizer to create a bag of words representation of text (vector dimensions = 900).
     - Test set Accuracy Score:  0.7751605995717344
@@ -86,11 +86,18 @@ Machine Learning models take numerical values as input. Converting the string to
     - Training set Accuracy Score:  0.8289591144438493
     - Recall Score:  0.7135067114093959
     - Average Precision Score:  0.7361504637616629
+- Using Word2Vec
+This was a good learning exercise and covered 
+    - Learning to train a model 
+    - Learning to create an embedding vector 
+    - Using KNN for training with ember vector 
+        - Solving for the problem with the 2D array size mismatch 
+    - Overall the scores from the Word2Vec did not look promising. Retraining with a different model could produce better results 
+        - Test set Accuracy Score:  0.5728051391862955
+        - Training set Accuracy Score:  0.5743617211212283
+        - Recall Score:  0.0
+        - Average Precision Score:  0.42563827887877165
 
-## 5. Visualise the Embeddings 
-In order to see whether our embeddings are capturing information that is relevant to our problem (i.e. whether the tweets are about disasters or not), it is a good idea to visualize them and see if the classes look well separated. Since vocabularies are usually very large and visualizing data in 20,000 dimensions is impossible, techniques like PCA will help project the data down to two dimensions. This is plotted below.
-
-## 6. Classification 
 I am using the following tools for classification 
 - KNN 
 - Logistic regression 
@@ -102,8 +109,8 @@ It is important to understand the accuracy of the model this is done using a Con
 - Build predictive model with 75% recall
 - Build predictive model with 75% precision
 
-## 7. Get results for the Test Data and post to Kaggle 
-TBD
+# 8. Further Exploration of Models 
+- BERT
 
 # Expected Results
 
@@ -117,3 +124,7 @@ Build a model that could predict the validity of a tweet as a true indicator of 
 - https://huggingface.co/
 - https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270
 - https://www.nltk.org/
+- https://patil-aakanksha.medium.com/top-5-pre-trained-word-embeddings-20de114bc26
+- https://www.kaggle.com/code/pierremegret/gensim-word2vec-tutorial 
+- https://www.analyticsvidhya.com/blog/2022/01/embedding-techniques-on-text-data-using-knn/
+
